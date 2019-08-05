@@ -12,7 +12,6 @@ export default function App() {
   const [eventHistory, setEventHistory] = useState([]);
 
   async function getGeofenceHistory() {
-    console.log("I AM CALLED HHHHHHH")
     const geofenceEvents = await getEventHistory();
     console.log(geofenceEvents)
     setEventHistory(geofenceEvents);
@@ -35,7 +34,6 @@ export default function App() {
           onPress={getGeofenceHistory}
           title="Refresh History"
           color="#FF0000"
-          accessibilityLabel="Learn more about this purple button"
         />
         <Button
           onPress={clearGeofenceHistory}
